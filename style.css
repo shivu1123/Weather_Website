@@ -1,0 +1,139 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: background 1.5s ease-in-out;
+}
+
+.weather-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.app-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.weather-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    background: #00c6ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0072ff;
+}
+
+.weather-info {
+    margin-top: 20px;
+    display: none;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.weather-info img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    animation: rotateIn 1.5s ease;
+}
+
+#cityName {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease forwards;
+}
+
+#temperature {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: bounce 1s infinite;
+}
+
+#description {
+    font-size: 1.2rem;
+    animation: fadeIn 3s ease forwards;
+}
+
+.loading {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
